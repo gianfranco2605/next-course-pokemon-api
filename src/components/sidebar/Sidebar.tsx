@@ -1,12 +1,14 @@
-import { SidebarMenuIcons } from "./SidebarMenuIcons";
 import Image from "next/image";
 
 import {
   IoBrowsersOutline,
   IoCalculator,
   IoFootball,
+  IoHeadset,
+  IoHeart,
   IoLogoReact,
 } from "react-icons/io5";
+import { SidebarMenuIcons } from "..";
 
 const menuItems = [
   {
@@ -26,6 +28,12 @@ const menuItems = [
     icon: <IoFootball size={30} />,
     title: "Pokemons",
     subTitle: "Static Generator",
+  },
+  {
+    path: "/dashboard/favorites",
+    icon: <IoHeart size={30} />,
+    title: "Favorites",
+    subTitle: "Favorites View",
   },
 ];
 
@@ -48,13 +56,7 @@ export const Sidebar = () => {
         <p className="text-yellow-300">Benvenuto</p>
         <a href="#" className="inline-flex space-x-2 items-center">
           <span>
-            <Image
-              src="/photo.cv.jpeg"
-              width={50}
-              height={50}
-              alt="profilo"
-              className="rounded-full"
-            />
+            <Image src="/photo.cv.jpeg" width={50} height={50} alt="profilo" />
           </span>
           <span className="text-sm md:text-base text-yellow-300 font-bold">
             Luca Navas Fernandini
